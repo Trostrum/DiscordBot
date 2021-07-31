@@ -1,0 +1,27 @@
+const Discord = require('discord.js');
+const client = new Discord.Client();
+client.login('ODcxMDcyMTY0NDUzOTY5OTgw.YQV_Kw.0I_avzpUyPAHmQMjwohO_j5w-3A');
+
+client.on('ready', ready);
+
+function ready(){
+console.log('Connected');
+}
+
+client.on('message',gotMessage);
+
+const replies = [
+'Yea? wassup',
+'Let\'s have some coffee',
+'Visit Our website https://trostrum.com',
+'Sorry i am busy can\'t talk'
+]
+
+
+function gotMessage(msg){
+	console.log(msg.content);
+	if(msg.channel.id =='741717268504772738' && msg.content.toLowerCase() === 'trostrum'){
+	const r = Math.floor(Math.random() * replies.length);
+
+}
+}
